@@ -1,6 +1,5 @@
 new Rellax('.landing-bg', {
     speed: -4,
-    center: true,
     vertical: true
 });
 
