@@ -7,22 +7,52 @@ body {
 }
 
 section {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+}
+
+section:not(.landing-page) {
     display: flex;
-    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section:not(.landing-page) > h1 {
+    padding: 0;
+    margin: 0.83rem;
+    font-size: 3rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .landing-page {
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: [first] 100%;
+    grid-template-rows: [one] 33% [two] 33% [three] 33%;
     background: url("imgs/image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.landing-page > h1 {
+.hero {
+    text-align: center;
+}
+
+.hero > h1 {
     font-size: 5rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -31,7 +61,7 @@ section {
     text-shadow: 0 0px 10px black;
 }
 
-.landing-page > h3 {
+.hero > h3 {
     font-size: 2rem;
     font-weight: 100;
     color: white;
