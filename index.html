@@ -33,11 +33,17 @@
                 <a href="#opening">Otevírací doba</a>
                 <a href="#contact">Kontakt</a>
             </nav>
-            <div class="hero">
+            <div class="hero parallax" data-rellax-speed="7" data-rellax-percentage="0.5">
                 <h1>Počítače Pittner</h1>
                 <h3>Servis PC a Notebooků</h3>
-                <button type="button" name="contact">Napiště mi!</button>
+                <h4>+420 702 082 007</h4>
+                <div>
+                    <button type="button" name="contact">Napiště mi!</button>
+                    <button type="button" name="phone">Zavolejte mi!</button>
+                </div>
             </div>
+            <span></span>
+            <img src="imgs/image.jpg" alt="Background image" class="landing-bg parallax" data-rellax-speed="2" data-rellax-percentage="0.5">
         </section>
         <section id="about">
             <h1>O mně</h1>
@@ -45,10 +51,29 @@
         </section>
         <section id="opening">
             <h1>Otevírací doba</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Den</th>
+                        <th>Hodiny</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pondělí</td><td>8:00 - 16:00</td></tr>
+                    <tr><td>Úterý</td><td>8:00 - 16:00</td></tr>
+                    <tr><td>Středa</td><td>8:00 - 16:00</td></tr>
+                    <tr><td>Čtvrtek</td><td>8:00 - 16:00</td></tr>
+                    <tr><td>Pátek</td><td>8:00 - 16:00</td></tr>
+                    <tr><td>Sobota</td><td>9:00 - 11:00</td></tr>
+                    <tr><td>Neděle</td><td>Zavřeno</td></tr>
+                </tbody>
+            </table>
+            <img src="imgs/motherboard.jpg" class="opening-background parallax" alt="Background image">
         </section>
         <section id="contact">
             <h1>Kontakt</h1>
         </section>
+        <script src="rellax.js" charset="utf-8"></script>
         <script src="master.js" charset="utf-8"></script>
     </body>
 </html>

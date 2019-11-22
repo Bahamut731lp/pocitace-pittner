@@ -1,3 +1,16 @@
+new Rellax('.landing-bg', {
+    speed: -4,
+    center: true,
+    vertical: true
+});
+
+
+new Rellax('.opening-background', {
+    speed: -4,
+    center: true,
+    vertical: true
+});
+
 let contactButton = document.querySelector("[name='contact']")
 contactButton.addEventListener("click", function() {
     //location = "https://www.facebook.com/Pocitace.Pittner.Servis.PC.a.Notebooku/"

@@ -26,8 +26,7 @@ section:not(.landing-page) > h1 {
 nav {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 50px;
+    align-items: center;
 }
 
 nav a {
@@ -36,20 +35,49 @@ nav a {
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
+    font-weight: 100;
+    user-select: none;
+}
+
+#opening {
+    flex-flow: column;
+    align-items: center;
+    justify-content: unset;
+    overflow: hidden;
+    position: relative;
+}
+
+#opening > *:not(img) {
+    z-index: 2;
+}
+
+#opening > h1 {
+    color: white;
+}
+
+.opening-background {
+    position: absolute;
 }
 
 .landing-page {
     display: grid;
     grid-template-columns: [first] 100%;
-    grid-template-rows: [one] 33% [two] 33% [three] 33%;
-    background: url("imgs/image.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-template-rows: [one] 10% [two] 57% [three] 33%;
+    overflow: hidden;
+    position: relative;
 }
 
+.landing-page img {
+    position: absolute;
+    display: block;
+}
 .hero {
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
 }
 
 .hero > h1 {
@@ -65,8 +93,15 @@ nav a {
     font-weight: 100;
     color: white;
     text-shadow: 0 0px 5px black;
+    margin: 25px;
 }
 
+.hero > h4 {
+    font-weight: 400;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}
 button {
     background: #00f2fe;
     background-image: linear-gradient(to left, #4facfe 0%, #00f2fe 100%);
@@ -80,6 +115,16 @@ button {
     font-family: "Roboto", sans-serif;
     cursor: pointer;
     transition: 0.3s;
+    margin: 10px;
+}
+
+button[name="phone"] {
+    background: #d31027;
+    background: linear-gradient(to right, #d31027, #ea384d);
+}
+
+button[name="phone"]:hover {
+    box-shadow: 0px 6px 19px -5px #d31027;
 }
 
 button:hover {
@@ -94,7 +139,27 @@ button:focus {
     box-shadow: 0 0 0 2em rgba(#fff,0);
 }
 
+button[name="phone"]:focus {
+    animation: pulse_call 0.3s;
+}
+
+table {
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 #00f2feFF; }
   100% { box-shadow: 0 0 0 15px #00f2fe00;}
+}
+
+@keyframes pulse_call {
+  0% { box-shadow: 0 0 0 0 #d31027FF; }
+  100% { box-shadow: 0 0 0 15px #d3102700;}
 }
