@@ -1,12 +1,12 @@
 new Rellax('.landing-bg', {
-    speed: -4,
-    vertical: true
+    speed: 2,
+    vertical: true,
 });
 
 
 new Rellax('.opening-background', {
-    speed: -4,
-    center: true,
+    speed: 2,
+    center: false,
     vertical: true
 });
 

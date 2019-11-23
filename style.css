@@ -6,6 +6,10 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    text-align: center;
+}
+
 section {
     width: 100%;
     height: 100vh;
@@ -13,8 +17,8 @@ section {
 
 section:not(.landing-page) {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
 section:not(.landing-page) > h1 {
@@ -39,6 +43,19 @@ nav a {
     user-select: none;
 }
 
+footer {
+    background: #2d3436;
+    margin-top: auto;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer h1 {
+    font-weight: 100;
+}
+
 #opening, #contact {
     flex-flow: column;
     align-items: center;
@@ -53,6 +70,14 @@ nav a {
 
 #opening > h1 {
     color: white;
+}
+
+#opening > h3 {
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px;
+    font-weight: 100;
+    font-size: 2rem;
 }
 
 .opening-background {
@@ -103,6 +128,11 @@ nav a {
     margin: 0;
 }
 
+.buttons {
+    display: flex;
+    flex-flow: row;
+}
+
 button {
     background: #00f2fe;
     background-image: linear-gradient(to left, #4facfe 0%, #00f2fe 100%);
@@ -117,6 +147,8 @@ button {
     cursor: pointer;
     transition: 0.3s;
     margin: 10px;
+    white-space: nowrap;
+    flex: 1;
 }
 
 button[name="phone"] {
@@ -158,6 +190,10 @@ th, td {
 	color: #fff;
 }
 
+thead {
+    background: linear-gradient(to left, rgb(79, 172, 254) 0%, rgb(0, 242, 254) 100%) 100% center / 200% 100% rgb(0, 242, 254);
+}
+
 .contacts img {
     width: 5vw;
     padding: 10px;
@@ -171,7 +207,36 @@ th, td {
 }
 
 .contacts a {
-    margin: 10px;
+    margin: 25px;
+}
+
+#about {
+    height: auto;
+}
+
+.panels {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.panels > div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.panels h1 {
+    color: #222;
+}
+
+.panels > div:last-child {
+    border-right: none;
+}
+
+.panels img {
+    width: 5vw;
 }
 
 @keyframes pulse {
@@ -182,4 +247,19 @@ th, td {
 @keyframes pulse_call {
   0% { box-shadow: 0 0 0 0 #d31027FF; }
   100% { box-shadow: 0 0 0 15px #d3102700;}
+}
+
+@media only screen and (max-width: 500px) {
+    .hero > h1 {
+        font-size: 3rem;
+    }
+
+    .landing-page {
+        grid-template-rows: [one] 10% [two] 85% [three] 5%;
+    }
+
+    .buttons {
+        display: flex;
+        flex-flow: column;
+    }
 }
