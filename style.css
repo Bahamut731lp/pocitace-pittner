@@ -98,7 +98,9 @@ footer h1 {
 .landing-page img {
     position: absolute;
     display: block;
+    filter: brightness(0.8);
 }
+
 .hero {
     text-align: center;
     display: flex;
@@ -129,6 +131,8 @@ footer h1 {
     color: white;
     font-size: 1.2rem;
     margin: 0;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
 }
 
 .buttons {
@@ -258,6 +262,15 @@ thead {
         display: flex;
         flex-flow: column;
         justify-content: space-around;
+    }
+
+    .landing-page img {
+        height: 120vh;
+    }
+
+    nav a {
+        flex: 1;
+        text-align: center;
     }
 
     .hero > h1 {

@@ -10,11 +10,6 @@ new Rellax('.opening-background', {
     vertical: true
 });
 
-let contactButton = document.querySelector("[name='contact']")
-contactButton.addEventListener("click", function() {
-    //location = "https://www.facebook.com/Pocitace.Pittner.Servis.PC.a.Notebooku/"
-})
-
 document.querySelectorAll("nav > a, #contact-btn").forEach(function(link, index) {
     link.addEventListener("click", function(event) {
         event.preventDefault();
