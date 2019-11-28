@@ -87,6 +87,10 @@ footer a {
     text-align: left;
 }
 
+#about_me > p {
+    font-size: 1.3rem;
+}
+
 .columns {
     display: flex;
     justify-content: center;
